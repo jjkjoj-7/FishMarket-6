@@ -1,0 +1,1414 @@
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fish Market Menu - Fixed</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+<div class="controls">
+  <select id="languageSelector">
+  <option value="en">English</option>
+  <option value="ar">العربية</option>
+  <option value="ru">Русский</option>
+  <option value="de">Deutsch</option>
+  <option value="fr">Français</option>
+  <option value="it">Italiano</option>
+  <option value="es">Español</option>
+  <option value="zh_simplified">简体中文</option>
+  <option value="zh_traditional">繁體中文</option>
+</select>
+  <button class="mode-toggle" onclick="toggleMode()">🌗 Mode</button>
+  <button class="zoom-toggle" onclick="toggleZoom()">A</button>
+</div>
+
+
+<div class="footer-bar">
+  <span>Created by <strong>Mahmoud Raafat</strong> — Contact via:</span>
+  <div class="footer-links">
+    <a href="https://wa.me/201284371004" target="_blank" class="footer-link">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="footer-icon">
+      WhatsApp
+    </a>
+    <span class="divider">|</span>
+    <a href="tel:+201284371004" class="footer-link">
+      <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Call" class="footer-icon" style="filter: brightness(0) saturate(100%) invert(36%) sepia(99%) saturate(1629%) hue-rotate(191deg) brightness(94%) contrast(96%);">
+      Call
+    </a>
+  </div>
+</div>
+<h3 style="font-size:50px;color: #ad0000;position: relative;top: -13px;">P.HUT</h3>
+
+<svg class="Logo" height="100px" preserveAspectRatio="xMidYMid meet" version="1.0" viewBox="200 100 700 600" width="100 px" xmlns="http://www.w3.org/2000/svg" style="
+    position: relative;
+    top: -88px;
+    left: 10px;
+    width: 237.05px;
+    height: 160.24px;
+    position: relative;
+    /* top: -100px; */
+    /* left: 16px; */
+">
+<g fill="#002D62" stroke="none" transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)">
+<path d="M6715 7316 c-17 -7 -67 -36 -112 -64 -297 -186 -660 -283 -1125 -298 -312 -11 -554 10 -1228 106 -492 70 -572 79 -795 87 -262 9 -541 -21 -813 -88 -537 -132 -1046 -417 -1445 -808 -155 -154 -155 -151 -19 -289 397 -399 885 -626 1492 -692 133 -15 440 -15 590 -1 301 29 643 106 1005 226 226 75 382 133 875 323 804 310 1288 449 1850 529 180 25 667 25 830 0 264 -41 494 -113 701 -218 129 -65 259 -152 259 -173 0 -16 -183 -194 -275 -267 -247 -195 -508 -319 -840 -399 -227 -55 -322 -65 -640 -64 -306 0 -374 5 -845 59 -565 66 -697 77 -985 82 -302 6 -463 -3 -675 -38 -256 -43 -468 -108 -675 -209 -336 -164 -513 -340 -466 -462 14 -36 66 -68 113 -68 29 0 62 17 164 85 205 136 366 206 628 270 203 49 350 66 637 72 398 9 713 -16 1644 -129 71 -8 228 -13 445 -13 302 0 349 2 479 23 306 49 544 123 796 247 306 151 557 345 757 587 102 122 119 155 126 234 7 89 -9 126 -92 209 -206 205 -645 408 -1063 489 -505 99 -985 79 -1611 -65 -457 -106 -796 -217 -1512 -498 -959 -377 -1412 -491 -1940 -491 -467 1 -864 112 -1195 335 -142 96 -200 147 -192 168 9 24 228 196 354 277 246 161 560 287 868 348 199 40 283 47 575 47 324 -1 429 -10 885 -81 561 -86 653 -96 963 -101 428 -8 740 36 1057 148 274 96 534 264 588 381 33 71 15 147 -43 182 -33 19 -55 20 -95 2z"></path>
+<path d="M2225 6346 c-69 -31 -115 -111 -115 -198 1 -167 169 -266 331 -197 172 74 152 343 -30 397 -51 16 -149 14 -186 -2z"></path>
+<path d="M8031 6088 c-141 -69 -157 -295 -28 -392 115 -87 270 -27 313 121 55 187 -119 353 -285 271z"></path>
+</g>
+</svg>
+
+<h1 style="position: relative;font-size:40px;margin: 0;top: -132px;" id="title">Fish Market Restaurant</h1>
+
+<h2 class="top" style="
+    position: relative;
+    bottom: 150px;
+" id="subtitle">Healthy, Tasty &amp; Delight Food</h2>
+  <h3 class="position" style="
+    position: relative;
+    bottom: 145px;
+    font-style: italic;
+    font-size: 16px;
+" id="slogan">The Only Way For Catch Of The Day in El Gouna</h3>
+
+
+
+
+<div class="tabs">
+  <button onclick="showSection('COLD_APPETIZERS', this)" class="active">
+    <span class="lang" data-en="COLD APPETIZERS" data-ar=" مقبلات باردة" data-ru="Холодные закуски" data-de="Kalte Vorspeisen" data-fr="ENTRÉES FROIDES" data-it="ANTIPASTI FREDDI" data-es="ENTRANTES FRÍAS" data-zh_simplified="冷开胃菜" data-zh_traditional="冷開胃菜">COLD APPETIZERS</span>
+  </button>
+
+  <button onclick="showSection('HOT_APPETIZERS', this)" class="">
+    <span class="lang" data-en="HOT APPETIZERS" data-ar=" مقيلات ساخنة" data-ru="Горячие закуски" data-de="Warme Vorspeisen" data-fr="ENTRÉES CHAUDES" data-it="ANTIPASTI CALDI" data-es="ENTRANTES CALIENTES" data-zh_simplified="热开胃菜" data-zh_traditional="熱開胃菜">HOT APPETIZERS</span>
+  </button>
+
+  <button onclick="showSection('SOUP', this)" class="">
+    <span class="lang" data-en="SOUP" data-ar="الشوربة" data-ru="Суп" data-de="Suppe" data-fr="SOUPE" data-it="ZUPPA" data-es="SOPA" data-zh_simplified="汤" data-zh_traditional="湯">SOUP</span>
+  </button>
+
+  <button onclick="showSection('PASTA', this)" class="">
+    <span class="lang" data-en="PASTA" data-ar="مكرونة" data-ru="Паста" data-de="Nudeln" data-fr="PÂTES" data-it="PASTA" data-es="PASTA" data-zh_simplified="意大利面" data-zh_traditional="義大利麵">PASTA</span>
+  </button>
+
+  <button onclick="showSection('RICE_MIXED_WITH', this)">
+    <span class="lang" data-en="RICE MIXED WITH" data-ar="مدفونة مع الأرز" data-ru="Рис с" data-de="Reis gemischt mit" data-fr="RIZ MIXÉ AVEC" data-it="RISO MISTO CON" data-es="ARROZ MEZCLADO CON" data-zh_simplified="米饭混合" data-zh_traditional="米飯混合">RICE MIXED WITH</span>
+  </button>
+
+  <button onclick="showSection('SPICE_TAGIN', this)">
+    <span class="lang" data-en="SPICE TAGIN" data-ar="طاجن بالتوابل" data-ru="Спайс Тажин" data-de="Gewürz-Tajin" data-fr="TAGINE ÉPICÉ" data-it="TAGINE SPEZIATO" data-es="TAGINE ESPECIADO" data-zh_simplified="香料塔吉锅" data-zh_traditional="香料塔吉鍋">SPICE TAGIN</span>
+  </button>
+
+  <button onclick="showSection('GRILLED_FRIED', this)">
+    <span class="lang" data-en="GRILLED &amp; FRIED" data-ar="مشوي أو مقلي" data-ru="Жареное и гриль" data-de="Gegrillt &amp; Gebraten" data-fr="GRILLÉ &amp; FRIT" data-it="GRIGLIATO &amp; FRITTO" data-es="A LA PARRILLA Y FRITO" data-zh_simplified="烤和炸" data-zh_traditional="烤和炸">GRILLED &amp; FRIED</span>
+  </button>
+
+  <button onclick="showSection('SPECIALTIES', this)">
+    <span class="lang" data-en="SPECIALTIES" data-ar="الأطباق الخاصة" data-ru="Специальности" data-de="Spezialitäten" data-fr="SPÉCIALITÉS" data-it="SPECIALITÀ" data-es="ESPECIALIDADES" data-zh_simplified="特色菜" data-zh_traditional="特色菜">SPECIALTIES</span>
+  </button>
+
+  <button onclick="showSection('BEEF_CHICKEN', this)" class="">
+    <span class="lang" data-en="BEEF &amp; CHICKEN" data-ar="اللحوم والدجاج" data-ru="Говядина и курица" data-de="Rind &amp; Huhn" data-fr="BOEUF &amp; POULET" data-it="MANZO &amp; POLLO" data-es="CARNE &amp; POLLO" data-zh_simplified="牛肉和鸡肉" data-zh_traditional="牛肉和雞肉">BEEF &amp; CHICKEN</span>
+  </button>
+
+  <button onclick="showSection('DESSERTS', this)" class="">
+    <span class="lang" data-en="DESSERTS" data-ar="حلو" data-ru="Десерты" data-de="Desserts" data-fr="DESSERTS" data-it="DESSERTS" data-es="POSTRES" data-zh_simplified="甜点" data-zh_traditional="甜點">DESSERTS</span>
+  </button>
+
+  <button onclick="showSection('SOFT_DRINKS', this)" class="">
+    <span class="lang" data-en="SOFT DRINKS" data-ar="المشروبات الغازية" data-ru="Безалкогольные напитки" data-de="Erfrischungsgetränke" data-fr="BOISSONS GAZEUSES" data-it="BIBITE ANALCOLICHE" data-es="BEBIDAS SIN ALCOHOL" data-zh_simplified="软饮" data-zh_traditional="軟飲">SOFT DRINKS</span>
+  </button>
+
+  <button onclick="showSection('HOT_DRINKS', this)">
+    <span class="lang" data-en="HOT DRINKS" data-ar="المشروبات الساخنة" data-ru="Горячие напитки" data-de="Heiße Getränke" data-fr="BOISSONS CHAUDES" data-it="BEVANDE CALDE" data-es="BEBIDAS CALIENTES" data-zh_simplified="热饮" data-zh_traditional="熱飲">HOT DRINKS</span>
+  </button>
+
+  <button onclick="showSection('FRESH_JUICES', this)" class="">
+    <span class="lang" data-en="FRESH JUICES" data-ar="العصائر الطازجة" data-ru="Свежие соки" data-de="Frische Säfte" data-fr="JUS FRAIS" data-it="SUCCO FRESCO" data-es="JUGOS FRESCOS" data-zh_simplified="鲜榨果汁" data-zh_traditional="鮮榨果汁">FRESH JUICES</span>
+  </button>
+</div>
+
+<div class="section" id="COLD_APPETIZERS" style="display: block;">
+  <div class="item" data-section="COLD_APPETIZERS" data-index="0">
+    <strong>Colbacho -  420 EGP</strong><br>
+    <small>(Raw Tuna, Olive Oil, Lemon, Pepper)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Colbacho - EGP 420', this)">+</button>
+  </div>
+
+  <div class="item" data-section="COLD_APPETIZERS" data-index="1">
+    <strong>Shrimp Cocktail - 440 EGP</strong><br>
+    <small>(Baby Shrimps, Cognac, Mayo, Orange Juice, Sauce)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Shrimp Cocktail - EGP 440', this)">+</button>
+  </div>
+
+  <div class="item" data-section="COLD_APPETIZERS" data-index="2">
+    <strong>Tuna Salad - 285 EGP</strong><br>
+    <small>(Tomato, Lettuce, Olive Oil, Lemon, Green Pepper)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Tuna Salad - EGP 285', this)">+</button>
+  </div>
+
+  <div class="item" data-section="COLD_APPETIZERS" data-index="3">
+    <strong>Creek Salad - 265 EGP</strong><br>
+    <small>(Tomato, Lettuce, Cucumber, Olives, Feta, Olive Oil, Lemon, Green Pepper)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Creek Salad - EGP 265', this)">+</button>
+  </div>
+
+  <div class="item" data-section="COLD_APPETIZERS" data-index="4">
+    <strong>Lebanese Mezze - 335 EGP</strong><br>
+    <small>(Tahina, Hummus, Baba Ghanoush)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Lebanese Mezze - EGP 335', this)">+</button>
+  </div>
+
+  <div class="item" data-section="COLD_APPETIZERS" data-index="5">
+    <strong>Fish Market Salad - 550 EGP</strong><br>
+    <small>(Shrimps, Calamari, Octopus, Tuna, Lettuce, Tomato, Onion)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Fish Market Salad - EGP 550', this)">+</button>
+  </div>
+</div>
+
+<div class="section" id="HOT_APPETIZERS" style="display: none;">
+  <div class="item" data-section="HOT_APPETIZERS" data-index="0">
+    <strong>Sardine - 165 EGP</strong>
+    <div class="options" style="margin:5px 0;"><label><input type="radio" name="HOT_APPETIZERS_0_option" value="Grilled"> Grilled</label><br><label><input type="radio" name="HOT_APPETIZERS_0_option" value="Fried"> Fried</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Sardine - EGP 165', this, 'sardine_option')">+</button>
+  </div> 
+
+  <div class="item" data-section="HOT_APPETIZERS" data-index="1">
+    <strong>Clams (100gr) - 140 EGP</strong>
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Clams (100gr) - EGP 140', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_APPETIZERS" data-index="2">
+    <strong>Mussels (100gr) - 335 EGP</strong>
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Musseis (100gr) - EGP 335', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_APPETIZERS" data-index="3">
+    <strong>Calamari (100gr) - 175 EGP</strong>
+    <div class="options" style="margin:5px 0;"><label><input type="radio" name="HOT_APPETIZERS_3_option" value="Grilled"> Grilled</label><br><label><input type="radio" name="HOT_APPETIZERS_3_option" value="Fried"> Fried</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Calamari (100gr) - EGP 175', this, 'calamari_option')">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_APPETIZERS" data-index="4">
+    <strong>Shrimps M (100gr) - 200 EGP</strong>
+    <div class="options" style="margin:5px 0;"><label><input type="radio" name="HOT_APPETIZERS_4_option" value="Grilled"> Grilled</label><br><label><input type="radio" name="HOT_APPETIZERS_4_option" value="Fried"> Fried</label><br><label><input type="radio" name="HOT_APPETIZERS_4_option" value="Butterfly"> Butterfly</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Shrimps M (100gr) - EGP 200', this, 'shrimps_option')">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_APPETIZERS" data-index="5">
+    <strong>Garlic Bread - 155 EGP</strong>
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Garlic Bread - EGP 155', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_APPETIZERS" data-index="6">
+    <strong>Crostino e Mozzarella - 150 EGP</strong>
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Crostino e Mozzarella - EGP 150', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_APPETIZERS" data-index="7">
+    <strong>Crostino e Mozzarella &amp; Shrimps - 245 EGP</strong>
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Crostino e Mozzarella &amp; Shrimps - EGP 245', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_APPETIZERS" data-index="8">
+    <strong>Crostino e Mozzarella &amp; Calamari - 225</strong>
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Crostino e Mozzarella &amp; Calamari - EGP 225', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_APPETIZERS" data-index="9">
+    <strong>Crostino e Mozzarella &amp; Anchovies - 240 EGP</strong>
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Crostino e Mozzarella &amp; Anchovies - EGP 240', this)">+</button>
+  </div>
+</div>
+
+<div class="section" id="SOUP" style="display: none;">
+  <div class="item" data-section="SOUP" data-index="0">
+    <strong>Seafood Soup (250gr) - 225 EGP</strong>
+    <div class="options" style="margin:5px 0;"><label><input type="radio" name="SOUP_0_option" value="Plain"> Plain</label><br><label><input type="radio" name="SOUP_0_option" value="Creamy"> Creamy</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Seafood Soup (250gr) - EGP 225', this, 'seafood_soup_option')">+</button>
+  </div>
+
+  <div class="item" data-section="SOUP" data-index="1">
+    <strong>Tomato Soup - 140 EGP</strong>
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Tomato Soup - EGP 140', this)">+</button>
+  </div>
+
+  <div class="item" data-section="SOUP" data-index="2">
+    <strong>Vegetable Soup - 140 EGP</strong>
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Vegetable Soup - EGP 140', this)">+</button>
+  </div>
+
+  <div class="item" data-section="SOUP" data-index="3">
+    <strong>Lentil Soup - 145 EGP</strong>
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Lentil Soup - EGP 145', this)">+</button>
+  </div>
+
+  <div class="item" data-section="SOUP" data-index="4">
+    <strong>Fish Soup - 215 EGP</strong>
+    <div class="options" style="margin:5px 0;"><label><input type="radio" name="SOUP_4_option" value="Plain"> Plain</label><br><label><input type="radio" name="SOUP_4_option" value="Creamy"> Creamy</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Fish Soup - EGP 215', this, 'fish_soup_option')">+</button>
+  </div>
+
+  <div class="item" data-section="SOUP" data-index="5">
+    <strong>Shrimp Soup - 255 EGP</strong>
+    <div class="options" style="margin:5px 0;"><label><input type="radio" name="SOUP_5_option" value="Plain"> Plain</label><br><label><input type="radio" name="SOUP_5_option" value="Creamy"> Creamy</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Shrimp Soup - EGP 255', this, 'shrimp_soup_option')">+</button>
+  </div>
+
+  <div class="item" data-section="SOUP" data-index="6">
+    <strong>Special Seafood Soup - 310 EGP</strong>
+    <div class="options" style="margin:5px 0;"><label><input type="radio" name="SOUP_6_option" value="Plain"> Plain</label><br><label><input type="radio" name="SOUP_6_option" value="Creamy"> Creamy</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Special Seafood Soup - EGP 310', this, 'special_seafood_soup_option')">+</button>
+  </div>
+</div>
+
+<div class="section" id="PASTA" style="display: none;">
+
+  <div class="item" data-section="PASTA" data-index="0">
+    <strong>Pomodoro - 280 EGP</strong><br>
+    <small>(Tomato Sauce, Basil)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Pomodoro - EGP 280', this)">+</button>
+  </div>
+
+  <div class="item" data-section="PASTA" data-index="1">
+    <strong>Olio Alio - 270 EGP</strong><br>
+    <small>(Garlic, Chili, Olive Oil)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Olio Alio - EGP 270', this)">+</button>
+  </div>
+
+  <div class="item" data-section="PASTA" data-index="2">
+    <strong>Arabiatta - 270 EGP</strong><br>
+    <small>(Garlic, Chili, Tomato Sauce)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Arabiatta - EGP 270', this)">+</button>
+  </div>
+
+  <div class="item" data-section="PASTA" data-index="3">
+    <strong>Clams - 430 EGP</strong><br>
+    <small>(Garlic, Olive Oil, Fresh Tomato, Parsley)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Clams - EGP 430', this)">+</button>
+  </div>
+
+  <div class="item" data-section="PASTA" data-index="4">
+    <strong>Shrimps - 475 EGP</strong><br>
+    <small>(Olive Oil, Fresh Tomato, Garlic, Chili)</small>
+    <div class="options" style="margin:5px 0;"><label><input type="radio" name="PASTA_4_option" value="Red Sauce"> Red Sauce</label><br><label><input type="radio" name="PASTA_4_option" value="White Sauce"> White Sauce</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Shrimps - EGP 475', this, 'shrimps_sauce_option')">+</button>
+  </div>
+
+  <div class="item" data-section="PASTA" data-index="5">
+    <strong>Lobster (400gr) - 2125 EGP</strong><br>
+    <small>(Garlic, Olive Oil, Parsley, Chili)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Lobster (400gr) - EGP 2125', this)">+</button>
+  </div>
+
+  <div class="item" data-section="PASTA" data-index="6">
+    <strong>Seafood - 480 EGP</strong><br>
+    <small>(Shrimp, Calamari, Fish, Clams, Parsley, Olive Oil, Fresh Tomato)</small>
+    <div class="options" style="margin:5px 0;"><label><input type="radio" name="PASTA_6_option" value="Red Sauce"> Red Sauce</label><br><label><input type="radio" name="PASTA_6_option" value="White Sauce"> White Sauce</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Seafood - EGP 480', this, 'seafood_sauce_option')">+</button>
+  </div>
+
+</div>
+
+<div class="section" id="RICE_MIXED_WITH" style="display: none;">
+
+  <div class="item" data-section="RICE_MIXED_WITH" data-index="0">
+    <strong>Fish - 380 EGP</strong><br>
+    <small>(Oil, Onions, Parsley, Chili, Tomato)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Fish - EGP 380', this)">+</button>
+  </div>
+
+  <div class="item" data-section="RICE_MIXED_WITH" data-index="1">
+    <strong>Clams - 410 EGP</strong><br>
+    <small>(Oil, Onions, Parsley, Chili)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Calms - EGP 410', this)">+</button>
+  </div>
+
+  <div class="item" data-section="RICE_MIXED_WITH" data-index="2">
+    <strong>Calamari - 390 EGP</strong><br>
+    <small>(Onions, Parsley, Sesame Oil, Pepper)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Calamari - EGP 390', this)">+</button>
+  </div>
+
+  <div class="item" data-section="RICE_MIXED_WITH" data-index="3">
+    <strong>Baby Shrimps - 400 EGP</strong><br>
+    <small>(Onions, Parsley, Oil, Tomato)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Baby Shrimps - EGP 400', this)">+</button>
+  </div>
+
+  <div class="item" data-section="RICE_MIXED_WITH" data-index="4">
+    <strong>Seafood - 420 EGP</strong><br>
+    <small>(Shrimp, Calamari, Fish, Clams, Onions, Parsley, Oil, Tomato)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Seafood - EGP 420', this)">+</button>
+  </div>
+
+</div>
+
+<div class="section" id="SPICE_TAGIN" style="display:none;">
+
+  <div class="item" data-section="SPICE_TAGIN" data-index="0">
+    <strong>Shrimps M - 490 EGP</strong>
+    <div class="options" style="margin:5px 0;"><label><input type="radio" name="SPICE_TAGIN_0_option" value="Red Sauce"> Red Sauce</label><br><label><input type="radio" name="SPICE_TAGIN_0_option" value="White Sauce"> White Sauce</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Shrimps M - EGP 490', this, 'shrimps_m_sauce_option')">+</button>
+  </div>
+
+  <div class="item" data-section="SPICE_TAGIN" data-index="1">
+    <strong>Shrimps S - 470 EGP</strong>
+    <div class="options" style="margin:5px 0;"><label><input type="radio" name="SPICE_TAGIN_1_option" value="Red Sauce"> Red Sauce</label><br><label><input type="radio" name="SPICE_TAGIN_1_option" value="White Sauce"> White Sauce</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Shrimps S - EGP 470', this, 'shrimps_s_sauce_option')">+</button>
+  </div>
+
+  <div class="item" data-section="SPICE_TAGIN" data-index="2">
+    <strong>Calamari - 475 EGP</strong>
+    <div class="options" style="margin:5px 0;"><label><input type="radio" name="SPICE_TAGIN_2_option" value="Red Sauce"> Red Sauce</label><br><label><input type="radio" name="SPICE_TAGIN_2_option" value="White Sauce"> White Sauce</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Calamari - EGP 475', this, 'calamari_sauce_option_2')">+</button>
+  </div>
+
+  <div class="item" data-section="SPICE_TAGIN" data-index="3">
+    <strong>Fish - 425 EGP</strong>
+    <div class="options" style="margin:5px 0;"><label><input type="radio" name="SPICE_TAGIN_3_option" value="Red Sauce"> Red Sauce</label><br><label><input type="radio" name="SPICE_TAGIN_3_option" value="White Sauce"> White Sauce</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Fish - EGP 425', this, 'fish_sauce_option')">+</button>
+  </div>
+
+  <div class="item" data-section="SPICE_TAGIN" data-index="4">
+    <strong>Seafood - 420 EGP</strong>
+    <div class="options" style="margin:5px 0;"><label><input type="radio" name="SPICE_TAGIN_4_option" value="Red Sauce"> Red Sauce</label><br><label><input type="radio" name="SPICE_TAGIN_4_option" value="White Sauce"> White Sauce</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Seafood - EGP 420', this, 'seafood_sauce_option_2')">+</button>
+  </div>
+
+
+</div>
+
+<div class="section" id="SPECIALTIES" style="display:none;">
+
+  <div class="item" data-section="SPECIALTIES" data-index="0">
+    <strong>Aragust Lobster (500gr) - 2600 EGP</strong><br>
+    <small>(Fresh Tomato, Olive Oil, Garlic, Pasta)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Aragust Lobster (500) - EGP 2600', this)">+</button>
+  </div>
+
+  <div class="item" data-section="SPECIALTIES" data-index="1">
+    <strong>Bronze (300gr) - 900 EGP</strong><br>
+    <small>(Olilo Alio, Pasta)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Bronze (300gr) - EGP 900', this)">+</button>
+  </div>
+
+  <div class="item" data-section="SPECIALTIES" data-index="2">
+    <strong>Octopus - 600 EGP</strong><br>
+    <small>(Pasta Primavera, Anchovies, Capers)</small>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Octopus - EGP 600', this)">+</button>
+  </div>
+
+  <div class="item" data-section="SPECIALTIES" data-index="3">
+    <strong>Shrimps &amp; Calamari (500gr) - 1150 EGP</strong>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Shrimps &amp; Calamari (500gr) - EGP 1150', this)">+</button>
+  </div>
+
+  <div class="item" data-section="SPECIALTIES" data-index="4">
+    <strong>Mixed Seafood Platter - 1700 EGP</strong>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Mixed Seafood Platter - EGP 1700', this)">+</button>
+  </div>
+
+  <div class="item" data-section="SPECIALTIES" data-index="5">
+    <strong>Fritto Misto - 1150 EGP</strong>
+    <textarea placeholder="Add your comment"></textarea><br>
+    <button class="add" onclick="addToOrder('Fritto Misto - EGP 1150', this)">+</button>
+  </div>
+
+</div>
+
+<div class="section" id="GRILLED_FRIED" style="display: none;">
+
+  <div class="item" data-section="GRILLED_FRIED" data-index="0">
+    <strong>Lobster (1kg) - 4200 EGP</strong><br>
+    <div class="options"><label><input type="radio" name="GRILLED_FRIED_0_option" value="Boiled"> Boiled</label><br><label><input type="radio" name="GRILLED_FRIED_0_option" value="White Sauce"> White Sauce</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Lobster (1kg) - EGP 4200', this, 'lobster_option')">+</button>
+  </div>
+
+  <div class="item" data-section="GRILLED_FRIED" data-index="1">
+    <strong>Crabs (300gr) - 490 EGP</strong><br>
+    <div class="options"><label><input type="radio" name="GRILLED_FRIED_1_option" value="Grilled"> Grilled</label><br><label><input type="radio" name="GRILLED_FRIED_1_option" value="Boiled"> Boiled</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Crabs (300gr) - EGP 490', this, 'crabs_option')">+</button>
+  </div>
+
+  <div class="item" data-section="GRILLED_FRIED" data-index="2">
+    <strong>Octopus (250gr) - 530 EGP</strong><br>
+    <div class="options"><label><input type="radio" name="GRILLED_FRIED_2_option" value="Grilled"> Grilled</label><br><label><input type="radio" name="GRILLED_FRIED_2_option" value="Butterfly"> Butterfly</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Octopus (250gr) - EGP 530', this, 'octopus_option')">+</button>
+  </div>
+
+  <div class="item" data-section="GRILLED_FRIED" data-index="3">
+    <strong>Calamari (250gr) - 415 EGP</strong><br>
+    <div class="options"><label><input type="radio" name="GRILLED_FRIED_3_option" value="Grilled"> Grilled</label><br><label><input type="radio" name="GRILLED_FRIED_3_option" value="Fried"> Fried</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Calamari (250gr) - EGP 415', this, 'calamari_option_2')">+</button>
+  </div>
+
+  <div class="item" data-section="GRILLED_FRIED" data-index="4">
+    <strong>White Snapper (500gr) - 550 EGP</strong><br>
+    <div class="options"><label><input type="radio" name="GRILLED_FRIED_4_option" value="Grilled"> Grilled</label><br><label><input type="radio" name="GRILLED_FRIED_4_option" value="Fried"> Fried</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('White Snapper (500gr) - EGP 550', this, 'wsnapper_option')">+</button>
+  </div>
+
+  <div class="item" data-section="GRILLED_FRIED" data-index="5">
+    <strong>Soul Fish (500gr) - 285 EGP</strong><br>
+    <div class="options"><label><input type="radio" name="GRILLED_FRIED_5_option" value="Grilled"> Grilled</label><br><label><input type="radio" name="GRILLED_FRIED_5_option" value="Fried"> Fried</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Soul Fish (500gr) - EGP 285', this, 'soulfish_option')">+</button>
+  </div>
+
+  <div class="item" data-section="GRILLED_FRIED" data-index="6">
+    <strong>Sea Bass (For Two) - 1200 EGP</strong><br>
+    <div class="options"><label><input type="radio" name="GRILLED_FRIED_6_option" value="Grilled Close"> Grilled Close</label><br><label><input type="radio" name="GRILLED_FRIED_6_option" value="Grilled Butterfly"> Grilled Butterfly</label><br><label><input type="radio" name="GRILLED_FRIED_6_option" value="Fried"> Fried</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Sea Bass (For Two) - EGP 1200', this, 'seabass_option')">+</button>
+  </div>
+
+  <div class="item" data-section="GRILLED_FRIED" data-index="7">
+    <strong>Red Snapper (For Two) - 1060 EGP</strong><br>
+    <div class="options"><label><input type="radio" name="GRILLED_FRIED_7_option" value="Grilled Close"> Grilled Close</label><br><label><input type="radio" name="GRILLED_FRIED_7_option" value="Grilled Butterfly"> Grilled Butterfly</label><br><label><input type="radio" name="GRILLED_FRIED_7_option" value="Fried"> Fried</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Red Snapper (For Two) - EGP 1060', this, 'redsnapper_option')">+</button>
+  </div>
+
+  <div class="item" data-section="GRILLED_FRIED" data-index="8">
+    <strong>Barboni (250gr) - 380 EGP</strong><br>
+    <div class="options"><label><input type="radio" name="GRILLED_FRIED_8_option" value="Grilled"> Grilled</label><br><label><input type="radio" name="GRILLED_FRIED_8_option" value="Fried"> Fried</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Barboni (250gr) - EGP 380', this, 'barboni_option')">+</button>
+  </div>
+
+  <div class="item" data-section="GRILLED_FRIED" data-index="9">
+    <strong>Shrimps L (300gr) - 800 EGP</strong><br>
+    <div class="options"><label><input type="radio" name="GRILLED_FRIED_9_option" value="Grilled"> Grilled</label><br><label><input type="radio" name="GRILLED_FRIED_9_option" value="Fried"> Fried</label><br><label><input type="radio" name="GRILLED_FRIED_9_option" value="Butterfly"> Butterfly</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Shrimps L (300gr) - EGP 800', this, 'shrimpsl_option')">+</button>
+  </div>
+
+  <div class="item" data-section="GRILLED_FRIED" data-index="10">
+    <strong>Shrimps M (200gr) - 450 EGP</strong><br>
+    <div class="options"><label><input type="radio" name="GRILLED_FRIED_10_option" value="Grilled"> Grilled</label><br><label><input type="radio" name="GRILLED_FRIED_10_option" value="Fried"> Fried</label><br><label><input type="radio" name="GRILLED_FRIED_10_option" value="Butterfly"> Butterfly</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Shrimps M (200gr) - EGP 450', this, 'shrimpsm_option')">+</button>
+  </div>
+
+  <div class="item" data-section="GRILLED_FRIED" data-index="11">
+    <strong>Fish Fillet (250gr) - 690 EGP</strong><br>
+    <div class="options"><label><input type="radio" name="GRILLED_FRIED_11_option" value="Grilled"> Grilled</label><br><label><input type="radio" name="GRILLED_FRIED_11_option" value="Fried"> Fried</label><br></div>
+
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Fish Fillet (250gr) - EGP 690', this, 'fillet_option')">+</button>
+  </div>
+
+  <div class="item" data-section="GRILLED_FRIED" data-index="12">
+    <strong>Fish and Chips - 720 EGP</strong><br>
+    <textarea placeholder="Add your comment"></textarea>
+    <button class="add" onclick="addToOrder('Fish and Chips - EGP 720', this)">+</button>
+  </div>
+
+</div>
+
+<div class="section" id="BEEF_CHICKEN" style="display: none;">
+  <div class="item" data-section="BEEF_CHICKEN" data-index="0">
+    <strong>Grilled Steak - 730 EGP</strong><br>
+    <small>(with Vegetable)</small>
+    <textarea class="translatable-textarea" name="beef_1" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Grilled Steak - EGP 730', this)">+</button>
+  </div>
+
+  <div class="item" data-section="BEEF_CHICKEN" data-index="1">
+    <strong>Pepper Steak - 730 EGP</strong><br>
+    <small>(with Vegetable &amp; Rice)</small>
+    <textarea class="translatable-textarea" name="beef_2" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Pepper Steak - EGP 730', this)">+</button>
+  </div>
+
+  <div class="item" data-section="BEEF_CHICKEN" data-index="2">
+    <strong>Escalope Pane - 650 EGP</strong><br>
+    <small>(with French Fries)</small>
+    <textarea class="translatable-textarea" name="beef_3" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Escalope Pane - EGP 650', this)">+</button>
+  </div>
+
+  <div class="item" data-section="BEEF_CHICKEN" data-index="3">
+    <strong>Chicken Pane - 470 EGP</strong><br>
+    <small>(with French Fries)</small>
+    <textarea class="translatable-textarea" name="beef_4" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Chicken Pane - EGP 470', this)">+</button>
+  </div>
+</div>
+
+<div class="section" id="DESSERTS" style="display: none;">
+  <div class="item" data-section="DESSERTS" data-index="0">
+    <strong>Fruit Salad - 220 EGP</strong>
+    <textarea class="translatable-textarea" name="dessert_1" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Fruit Salad - EGP 220', this)">+</button>
+  </div>
+
+  <div class="item" data-section="DESSERTS" data-index="1">
+    <strong>Fruit Platter - 400 EGP</strong>
+    <textarea class="translatable-textarea" name="dessert_2" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Fruit Platter - EGP 400', this)">+</button>
+  </div>
+
+  <div class="item" data-section="DESSERTS" data-index="2">
+    <strong>Ice Cream - 150 EGP</strong>
+    <textarea class="translatable-textarea" name="dessert_3" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Ice Cream - EGP 150', this)">+</button>
+  </div>
+</div>
+
+<div class="section" id="SOFT_DRINKS" style="display: none;">
+
+  <div class="item" data-section="SOFT_DRINKS" data-index="0">
+    <strong>Cola - 85 EGP</strong>
+    <textarea class="translatable-textarea" name="soft_1" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Cola - EGP 85', this)">+</button>
+  </div>
+
+  <div class="item" data-section="SOFT_DRINKS" data-index="1">
+    <strong>Fanta - 85 EGP</strong>
+    <textarea class="translatable-textarea" name="soft_2" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Fanta - EGP 85', this)">+</button>
+  </div>
+
+  <div class="item" data-section="SOFT_DRINKS" data-index="2">
+    <strong>Sprite - 85 EGP</strong>
+    <textarea class="translatable-textarea" name="soft_3" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Sprite - EGP 85', this)">+</button>
+  </div>
+
+  <div class="item" data-section="SOFT_DRINKS" data-index="3">
+    <strong>Mineral Water Small - 60 EGP</strong>
+    <textarea class="translatable-textarea" name="soft_4" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Mineral Water Small - EGP 60', this)">+</button>
+  </div>
+
+  <div class="item" data-section="SOFT_DRINKS" data-index="4">
+    <strong>Mineral Water Large - 75 EGP</strong>
+    <textarea class="translatable-textarea" name="soft_5" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Mineral Water Large - EGP 75', this)">+</button>
+  </div>
+
+  <div class="item" data-section="SOFT_DRINKS" data-index="5">
+    <strong>Sparkling Water - 85 EGP</strong>
+    <textarea class="translatable-textarea" name="soft_6" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Sparkling Water - EGP 85', this)">+</button>
+  </div>
+
+  <div class="item" data-section="SOFT_DRINKS" data-index="6">
+    <strong>Hibiscus (Karakade) - 125 EGP</strong>
+    <textarea class="translatable-textarea" name="soft_7" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Hibiscus (Karakade) - EGP 125', this)">+</button>
+  </div>
+
+  <div class="item" data-section="SOFT_DRINKS" data-index="7">
+    <strong>Iced Tea - 130 EGP</strong>
+    <textarea class="translatable-textarea" name="soft_8" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Iced Tea - EGP 130', this)">+</button>
+  </div>
+
+</div>
+
+<div class="section" id="HOT_DRINKS" style="display: none;">
+
+  <div class="item" data-section="HOT_DRINKS" data-index="0">
+    <strong>Tea - 70 EGP</strong>
+    <textarea class="translatable-textarea" name="hotdrink_1" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Tea - EGP 70', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_DRINKS" data-index="1">
+    <strong>Coffee - 85 EGP</strong>
+    <textarea class="translatable-textarea" name="hotdrink_2" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Coffee - EGP 85', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_DRINKS" data-index="2">
+    <strong>Anise Tea - 65 EGP</strong>
+    <textarea class="translatable-textarea" name="hotdrink_3" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Anise Tea - EGP 65', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_DRINKS" data-index="3">
+    <strong>Tilia - 65 EGP</strong>
+    <textarea class="translatable-textarea" name="hotdrink_4" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Tilia - EGP 65', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_DRINKS" data-index="4">
+    <strong>Nescafe - 90 EGP</strong>
+    <textarea class="translatable-textarea" name="hotdrink_5" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Nescafe - EGP 90', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_DRINKS" data-index="5">
+    <strong>Espresso - 75 EGP</strong>
+    <textarea class="translatable-textarea" name="hotdrink_6" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Espresso - EGP 75', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_DRINKS" data-index="6">
+    <strong>Cappuccino - 115 EGP</strong>
+    <textarea class="translatable-textarea" name="hotdrink_7" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Cappuccino - EGP 115', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_DRINKS" data-index="7">
+    <strong>Cafe Latte - 115 EGP</strong>
+    <textarea class="translatable-textarea" name="hotdrink_8" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Cafe Latte - EGP 115', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_DRINKS" data-index="8">
+    <strong>Hot Chocolate - 150 EGP</strong>
+    <textarea class="translatable-textarea" name="hotdrink_9" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Hot Chocolate - EGP 150', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_DRINKS" data-index="9">
+    <strong>Ginger Lemon Honey - 165 EGP</strong>
+    <textarea class="translatable-textarea" name="hotdrink_10" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Ginger Lemon Honey - EGP 165', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_DRINKS" data-index="10">
+    <strong>Ginger Orange - 175 EGP</strong>
+    <textarea class="translatable-textarea" name="hotdrink_11" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Ginger Orange - EGP 175', this)">+</button>
+  </div>
+
+  <div class="item" data-section="HOT_DRINKS" data-index="11">
+    <strong>Hot Cider - 150 EGP</strong>
+    <textarea class="translatable-textarea" name="hotdrink_12" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Hot Cider - EGP 150', this)">+</button>
+  </div>
+</div>
+
+<!-- FRESH JUICES -->
+<div class="section" id="FRESH_JUICES" style="display: none;">
+
+  <div class="item" data-section="FRESH_JUICES" data-index="0">
+    <strong>Fresh Cocktail - 120 EGP</strong>
+    <textarea class="translatable-textarea" name="juice_1" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Fresh Cocktail - EGP 120', this)">+</button>
+  </div>
+
+  <div class="item" data-section="FRESH_JUICES" data-index="1">
+    <strong>Mango Juice - 95 EGP</strong>
+    <textarea class="translatable-textarea" name="juice_2" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Mango Juice - EGP 95', this)">+</button>
+  </div>
+
+  <div class="item" data-section="FRESH_JUICES" data-index="2">
+    <strong>Orange Juice - 100 EGP</strong>
+    <textarea class="translatable-textarea" name="juice_3" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Orange Juice - EGP 100', this)">+</button>
+  </div>
+
+  <div class="item" data-section="FRESH_JUICES" data-index="3">
+    <strong>Lemon Juice - 95 EGP</strong>
+    <textarea class="translatable-textarea" name="juice_4" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Lemon Juice - EGP 95', this)">+</button>
+  </div>
+
+  <div class="item" data-section="FRESH_JUICES" data-index="4">
+    <strong>Strawberry Juice - 95 EGP</strong>
+    <textarea class="translatable-textarea" name="juice_5" placeholder="Add your comment" rows="2" style="width:100%; margin-top:8px;"></textarea>
+    <button class="add" onclick="addToOrder('Strawberry Juice - EGP 95', this)">+</button>
+  </div>
+
+</div>
+
+<hr style="width: 100%; height: 2px; background-color: white; border: none; opacity: 1;">
+
+
+<!-- <div class="order" style="margin-top:20px;">
+  <h3 id="order">Your Order:</h3>
+  <h4 id="tableLabel">Table:2</h4>
+  <ul id="order-list" data-id="0"><li data-id="0"></li></ul>
+  <div id="total" style="font-weight:bold; margin-top:10px;">Total: EGP 0</div>
+  <button id="submit" onclick="openPopup()" style="margin-top:10px; padding:10px 20px; background-color:#28a745; color:white; border:none; border-radius:5px; cursor:pointer;">Submit Order</button>
+</div> -->
+
+
+<div class="order" style="margin-top:20px;">
+  <h3 id="order">Your Order:</h3>
+  <h4 id="tableLabel">Table:6</h4>
+  <ul id="order-list" data-id="0"></ul>
+  <div id="total" style="font-weight:bold; margin-top:10px;">Total: EGP 0</div>
+  <button id="submit" onclick="openPopup()" style="margin-top:10px; padding:10px 20px; background-color:#28a745; color:white; border:none; border-radius:5px; cursor:pointer;">Submit Order</button>
+</div>
+
+
+<div id="popup" style="display: none;">
+  <div class="box">
+    <h3 id="popupOrderTitle">Your Order</h3>
+    <ul id="popup-order-list" style="text-align:left; margin:10px 0;"><li>Table:6</li><li>COLD_APPETIZERS - Fish Market Salad - EGP 465</li></ul>
+    <div id="popup-total" style="margin-top:8px; font-weight:bold;">Total: EGP 465</div>
+    <button id="okBtn" onclick="okAndSave()" style="margin-top:10px; padding:8px 15px; background-color:#28a745; color:#ffffff; border:none; border-radius:5px; cursor:pointer;">
+      OK
+    </button>
+    <button id="closeBtn" onclick="closePopup()" style="margin-top:10px; padding:8px 15px; background-color:#dc3545; color:#ffffff; border:none; border-radius:5px; cursor:pointer;">
+      Close
+    </button>
+  </div>
+</div>
+<script type="module" src="firebass.js"></script>
+
+<script src="javascritp.js"></script>
+
+<script type="module">
+
+</script>
+
+<div class="fish" style="top: 5vh; left: 0vw; animation-duration: 10s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#6fc1ff" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#6fc1ff" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#6fc1ff" stroke-width="2"></line>
+  </svg>
+</div>
+<div class="fish" style="top: 15vh; left: 5vw; animation-duration: 11s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#a4e3f0" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#a4e3f0" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#a4e3f0" stroke-width="2"></line>
+  </svg>
+</div>
+<div class="fish" style="top: 25vh; left: 10vw; animation-duration: 12s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#f3ffb6" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#f3ffb6" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#f3ffb6" stroke-width="2"></line>
+  </svg>
+</div>
+<div class="fish" style="top: 35vh; left: 15vw; animation-duration: 9s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffbdbd" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#ffbdbd" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#ffbdbd" stroke-width="2"></line>
+  </svg>
+</div>
+<div class="fish" style="top: 45vh; left: 20vw; animation-duration: 10.5s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffffff" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#ffffff" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#ffffff" stroke-width="2"></line>
+  </svg>
+</div>
+<div class="fish" style="top: 55vh; left: 25vw; animation-duration: 11.2s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffccff" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#ffccff" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#ffccff" stroke-width="2"></line>
+  </svg>
+</div>
+<div class="fish" style="top: 65vh; left: 30vw; animation-duration: 12.5s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#c0ffee" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#c0ffee" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#c0ffee" stroke-width="2"></line>
+  </svg>
+</div>
+<div class="fish" style="top: 75vh; left: 35vw; animation-duration: 9.8s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#00ffff" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#00ffff" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#00ffff" stroke-width="2"></line>
+  </svg>
+</div>
+<div class="fish" style="top: 85vh; left: 40vw; animation-duration: 11.6s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ff9966" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#ff9966" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#ff9966" stroke-width="2"></line>
+  </svg>
+</div>
+
+<div class="fish" style="top: 92vh; left: 5vw; animation-duration: 10s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#6fc1ff" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#6fc1ff" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#6fc1ff" stroke-width="2"></line>
+  </svg>
+</div>
+
+<div class="fish" style="top: 95vh; left: 20vw; animation-duration: 11.5s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#a4e3f0" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#a4e3f0" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#a4e3f0" stroke-width="2"></line>
+  </svg>
+</div>
+
+<div class="fish" style="top: 98vh; left: 35vw; animation-duration: 12s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffbdbd" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#ffbdbd" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#ffbdbd" stroke-width="2"></line>
+  </svg>
+</div>
+<!-- 20 سمكة أسفل الصفحة -->
+<div class="fish" style="top: 92vh; left: 5vw; animation-duration: 10s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#6fc1ff" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#6fc1ff" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#6fc1ff" stroke-width="2"></line>
+  </svg>
+</div>
+
+<div class="fish" style="top: 92vh; left: 10vw; animation-duration: 11s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#a4e3f0" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#a4e3f0" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#a4e3f0" stroke-width="2"></line>
+  </svg>
+</div>
+
+<div class="fish" style="top: 92vh; left: 15vw; animation-duration: 12s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffbdbd" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#ffbdbd" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#ffbdbd" stroke-width="2"></line>
+  </svg>
+</div>
+
+<div class="fish" style="top: 35.2112vh; left: 99.8593vw; animation-duration: 11.3106s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#6fc1ff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#6fc1ff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#6fc1ff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 14.2242vh; left: 43.1262vw; animation-duration: 11.6399s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#a4e3f0" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#a4e3f0" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#a4e3f0" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 55.0299vh; left: 27.1541vw; animation-duration: 11.8596s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#f3ffb6" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#f3ffb6" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#f3ffb6" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 72.38vh; left: 15.4449vw; animation-duration: 8.55534s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffbdbd" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ffbdbd" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ffbdbd" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 74.7857vh; left: 56.4816vw; animation-duration: 9.58686s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffffff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ffffff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ffffff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 81.512vh; left: 94.7094vw; animation-duration: 12.4176s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffccff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ffccff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ffccff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 64.0701vh; left: 2.64384vw; animation-duration: 12.6271s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#c0ffee" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#c0ffee" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#c0ffee" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 48.313vh; left: 28.8358vw; animation-duration: 9.07536s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#00ffff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#00ffff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#00ffff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 40.3631vh; left: 8.22617vw; animation-duration: 8.18126s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ff9966" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ff9966" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ff9966" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 22.9322vh; left: 95.973vw; animation-duration: 11.8981s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#99ff99" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#99ff99" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#99ff99" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 29.8812vh; left: 74.7319vw; animation-duration: 12.9287s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffcc66" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ffcc66" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ffcc66" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 21.2647vh; left: 76.4194vw; animation-duration: 8.2634s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ff66cc" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ff66cc" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ff66cc" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 63.2088vh; left: 4.14073vw; animation-duration: 11.1462s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#66ccff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#66ccff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#66ccff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 64.0548vh; left: 46.5327vw; animation-duration: 10.203s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ff9999" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ff9999" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ff9999" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 19.6883vh; left: 90.2558vw; animation-duration: 11.8545s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ccffcc" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ccffcc" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ccffcc" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 48.0861vh; left: 99.4259vw; animation-duration: 9.13969s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#6fc1ff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#6fc1ff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#6fc1ff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 41.5508vh; left: 36.147vw; animation-duration: 8.33596s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#a4e3f0" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#a4e3f0" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#a4e3f0" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 34.836vh; left: 81.551vw; animation-duration: 9.92072s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#f3ffb6" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#f3ffb6" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#f3ffb6" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 97.8917vh; left: 0.1301vw; animation-duration: 12.9834s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffbdbd" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ffbdbd" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ffbdbd" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 91.4391vh; left: 35.9685vw; animation-duration: 10.5745s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffffff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ffffff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ffffff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 49.4317vh; left: 39.8778vw; animation-duration: 8.57432s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffccff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ffccff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ffccff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 39.1919vh; left: 4.84268vw; animation-duration: 11.6686s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#c0ffee" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#c0ffee" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#c0ffee" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 78.869vh; left: 64.8046vw; animation-duration: 12.2121s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#00ffff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#00ffff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#00ffff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 49.7621vh; left: 0.134178vw; animation-duration: 10.406s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ff9966" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ff9966" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ff9966" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 67.8057vh; left: 77.6672vw; animation-duration: 12.0111s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#99ff99" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#99ff99" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#99ff99" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 96.773vh; left: 47.596vw; animation-duration: 12.1053s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffcc66" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ffcc66" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ffcc66" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 97.8607vh; left: 29.0501vw; animation-duration: 8.29141s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ff66cc" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ff66cc" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ff66cc" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 31.6897vh; left: 26.4506vw; animation-duration: 12.0781s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#66ccff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#66ccff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#66ccff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 77.9756vh; left: 51.2762vw; animation-duration: 10.8774s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ff9999" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ff9999" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ff9999" stroke-width="2"></line>
+    </svg>
+  </div>
+<div class="fish" style="top: 5vh; left: 0vw; animation-duration: 10s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#6fc1ff" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#6fc1ff" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#6fc1ff" stroke-width="2"></line>
+  </svg>
+</div>
+<div class="fish" style="top: 15vh; left: 5vw; animation-duration: 11s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#a4e3f0" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#a4e3f0" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#a4e3f0" stroke-width="2"></line>
+  </svg>
+</div>
+<div class="fish" style="top: 25vh; left: 10vw; animation-duration: 12s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#f3ffb6" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#f3ffb6" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#f3ffb6" stroke-width="2"></line>
+  </svg>
+</div>
+<div class="fish" style="top: 35vh; left: 15vw; animation-duration: 9s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffbdbd" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#ffbdbd" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#ffbdbd" stroke-width="2"></line>
+  </svg>
+</div>
+<div class="fish" style="top: 45vh; left: 20vw; animation-duration: 10.5s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffffff" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#ffffff" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#ffffff" stroke-width="2"></line>
+  </svg>
+</div>
+<div class="fish" style="top: 55vh; left: 25vw; animation-duration: 11.2s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffccff" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#ffccff" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#ffccff" stroke-width="2"></line>
+  </svg>
+</div>
+<div class="fish" style="top: 65vh; left: 30vw; animation-duration: 12.5s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#c0ffee" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#c0ffee" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#c0ffee" stroke-width="2"></line>
+  </svg>
+</div>
+<div class="fish" style="top: 75vh; left: 35vw; animation-duration: 9.8s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#00ffff" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#00ffff" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#00ffff" stroke-width="2"></line>
+  </svg>
+</div>
+<div class="fish" style="top: 85vh; left: 40vw; animation-duration: 11.6s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ff9966" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#ff9966" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#ff9966" stroke-width="2"></line>
+  </svg>
+</div>
+
+<div class="fish" style="top: 92vh; left: 5vw; animation-duration: 10s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#6fc1ff" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#6fc1ff" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#6fc1ff" stroke-width="2"></line>
+  </svg>
+</div>
+
+<div class="fish" style="top: 95vh; left: 20vw; animation-duration: 11.5s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#a4e3f0" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#a4e3f0" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#a4e3f0" stroke-width="2"></line>
+  </svg>
+</div>
+
+<div class="fish" style="top: 98vh; left: 35vw; animation-duration: 12s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffbdbd" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#ffbdbd" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#ffbdbd" stroke-width="2"></line>
+  </svg>
+</div>
+<!-- 20 سمكة أسفل الصفحة -->
+<div class="fish" style="top: 92vh; left: 5vw; animation-duration: 10s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#6fc1ff" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#6fc1ff" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#6fc1ff" stroke-width="2"></line>
+  </svg>
+</div>
+
+<div class="fish" style="top: 92vh; left: 10vw; animation-duration: 11s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#a4e3f0" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#a4e3f0" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#a4e3f0" stroke-width="2"></line>
+  </svg>
+</div>
+
+<div class="fish" style="top: 92vh; left: 15vw; animation-duration: 12s;">
+  <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffbdbd" stroke-width="2" fill="none"></path>
+    <line x1="40" y1="15" x2="48" y2="10" stroke="#ffbdbd" stroke-width="2"></line>
+    <line x1="40" y1="15" x2="48" y2="20" stroke="#ffbdbd" stroke-width="2"></line>
+  </svg>
+</div>
+
+<div class="fish" style="top: 35.2112vh; left: 99.8593vw; animation-duration: 11.3106s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#6fc1ff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#6fc1ff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#6fc1ff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 14.2242vh; left: 43.1262vw; animation-duration: 11.6399s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#a4e3f0" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#a4e3f0" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#a4e3f0" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 55.0299vh; left: 27.1541vw; animation-duration: 11.8596s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#f3ffb6" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#f3ffb6" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#f3ffb6" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 72.38vh; left: 15.4449vw; animation-duration: 8.55534s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffbdbd" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ffbdbd" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ffbdbd" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 74.7857vh; left: 56.4816vw; animation-duration: 9.58686s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffffff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ffffff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ffffff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 81.512vh; left: 94.7094vw; animation-duration: 12.4176s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffccff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ffccff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ffccff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 64.0701vh; left: 2.64384vw; animation-duration: 12.6271s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#c0ffee" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#c0ffee" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#c0ffee" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 48.313vh; left: 28.8358vw; animation-duration: 9.07536s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#00ffff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#00ffff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#00ffff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 40.3631vh; left: 8.22617vw; animation-duration: 8.18126s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ff9966" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ff9966" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ff9966" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 22.9322vh; left: 95.973vw; animation-duration: 11.8981s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#99ff99" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#99ff99" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#99ff99" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 29.8812vh; left: 74.7319vw; animation-duration: 12.9287s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffcc66" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ffcc66" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ffcc66" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 136.2647vh; left: 76.4194vw; animation-duration: 8.2634s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ff66cc" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ff66cc" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ff66cc" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 151.2088vh; left: 4.14073vw; animation-duration: 11.1462s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#66ccff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#66ccff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#66ccff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 140.0548vh; left: 46.5327vw; animation-duration: 10.203s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ff9999" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ff9999" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ff9999" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 120.6883vh; left: 90.2558vw; animation-duration: 11.8545s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ccffcc" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ccffcc" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ccffcc" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 81.0861vh; left: 99.4259vw; animation-duration: 9.13969s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#6fc1ff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#6fc1ff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#6fc1ff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 123.5508vh; left: 36.147vw; animation-duration: 8.33596s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#a4e3f0" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#a4e3f0" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#a4e3f0" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 126.836vh; left: 81.551vw; animation-duration: 9.92072s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#f3ffb6" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#f3ffb6" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#f3ffb6" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 151.8917vh; left: 0.1301vw; animation-duration: 12.9834s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffbdbd" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ffbdbd" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ffbdbd" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 167.4391vh; left: 35.9685vw; animation-duration: 10.5745s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffffff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ffffff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ffffff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 168.4317vh; left: 39.8778vw; animation-duration: 8.57432s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffccff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ffccff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ffccff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 164.1919vh; left: 4.84268vw; animation-duration: 11.6686s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#c0ffee" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#c0ffee" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#c0ffee" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 150.869vh; left: 64.8046vw; animation-duration: 12.2121s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#00ffff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#00ffff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#00ffff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 135.7621vh; left: 0.134178vw; animation-duration: 10.406s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ff9966" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ff9966" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ff9966" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 141.8057vh; left: 77.6672vw; animation-duration: 12.0111s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#99ff99" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#99ff99" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#99ff99" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 120.773vh; left: 47.596vw; animation-duration: 12.1053s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ffcc66" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ffcc66" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ffcc66" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 166.6897vh; left: 29.0501vw; animation-duration: 8.29141s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ff66cc" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ff66cc" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ff66cc" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 174.6897vh; left: 26.4506vw; animation-duration: 12.0781s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#66ccff" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#66ccff" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#66ccff" stroke-width="2"></line>
+    </svg>
+  </div><div class="fish" style="top: 161.9756vh; left: 51.2762vw; animation-duration: 10.8774s;">
+    <svg width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2,15 Q20,0 40,15 Q20,30 2,15 Z" stroke="#ff9999" stroke-width="2" fill="none"></path>
+      <line x1="40" y1="15" x2="48" y2="10" stroke="#ff9999" stroke-width="2"></line>
+      <line x1="40" y1="15" x2="48" y2="20" stroke="#ff9999" stroke-width="2"></line>
+    </svg>
+  </div>
+
+
+
+  </body></html>
